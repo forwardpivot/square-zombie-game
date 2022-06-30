@@ -7,22 +7,27 @@ const Player =  () => {
 
 
     const move = (e) => {
+        let coords = player.getBoundingClientRect();
         switch(e.code) {
             case 'KeyW':
                 console.log("W was pressed");
-                player.style.marginBottom = 10 + "px";
+                console.log(coords);
+                player.style.top = coords.bottom + 20 + "px";
                 break;
             case 'KeyA':
                 console.log("A was pressed");
+                console.log(coords);
                 player.style.marginRight = 10 + "px";
                 break;
             case 'KeyS':
                 console.log("S was pressed");
+                console.log(coords);
                 player.style.marginTop = 5 + "px";
                 break;
             case 'KeyD':
                 console.log("D was pressed");
-                player.style.marginLeft = 5 + "px";
+                console.log(coords);
+                player.style.top = coords.left + 20 + "px";
                 break;
         }
     }
