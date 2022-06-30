@@ -10,11 +10,11 @@ const Player =  () => {
         switch(e.code) {
             case 'KeyW':
                 console.log("W was pressed");
-                player.style.marginBottom = 5 + "px";
+                player.style.marginBottom = 10 + "px";
                 break;
             case 'KeyA':
                 console.log("A was pressed");
-                player.style.marginRight = 5 + "px";
+                player.style.marginRight = 10 + "px";
                 break;
             case 'KeyS':
                 console.log("S was pressed");
