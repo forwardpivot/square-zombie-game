@@ -5,19 +5,24 @@ const Player =  () => {
     player.classList.add('player');
     document.body.appendChild(player);
 
+
     const move = (e) => {
         switch(e.code) {
             case 'KeyW':
                 console.log("W was pressed");
+                player.style.marginBottom = 5 + "px";
                 break;
             case 'KeyA':
                 console.log("A was pressed");
+                player.style.marginRight = 5 + "px";
                 break;
             case 'KeyS':
                 console.log("S was pressed");
+                player.style.marginTop = 5 + "px";
                 break;
             case 'KeyD':
                 console.log("D was pressed");
+                player.style.marginLeft = 5 + "px";
                 break;
         }
     }
@@ -27,4 +32,3 @@ const Player =  () => {
 
 
     const player = Player();
-
