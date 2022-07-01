@@ -5,35 +5,33 @@ const Player =  () => {
     player.classList.add('player');
     document.body.appendChild(player);
 
-
     const move = (e) => {
-        let coords = player.getBoundingClientRect();
+
         switch(e.code) {
+
             case 'KeyW':
                 console.log("W was pressed");
-                console.log(coords);
-                player.style.top = coords.bottom + 20 + "px";
+                player.style.marginBottom += 4 + "px";
+                console.log(player.style.marginBottom);
                 break;
             case 'KeyA':
                 console.log("A was pressed");
-                console.log(coords);
-                player.style.marginRight = 10 + "px";
+                player.style.marginRight += 4 + "px";
+                console.log(player.style.marginRight);
                 break;
             case 'KeyS':
                 console.log("S was pressed");
-                console.log(coords);
-                player.style.marginTop = 5 + "px";
+                player.style.marginTop += 7 + "px";
+                console.log(player.style.marginTop);
                 break;
             case 'KeyD':
                 console.log("D was pressed");
-                console.log(coords);
-                player.style.top = coords.left + 20 + "px";
+                player.style.marginLeft += 2 + "px";
+                console.log(player.style.marginLeft);
                 break;
         }
     }
-
     window.addEventListener('keydown', move);
 }
 
-
-    const player = Player();
+const player = Player();
