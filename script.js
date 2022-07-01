@@ -6,7 +6,6 @@ const Player =  () => {
     document.body.appendChild(player);
 
     const move = (e) => {
-
         switch(e.code) {
 
             case 'KeyW':
@@ -18,6 +17,7 @@ const Player =  () => {
                 console.log("A was pressed");
                 player.style.marginRight += 4 + "px";
                 console.log(player.style.marginRight);
+                pressed = false;
                 break;
             case 'KeyS':
                 console.log("S was pressed");
@@ -32,6 +32,8 @@ const Player =  () => {
         }
     }
     window.addEventListener('keydown', move);
+    return {move}
 }
 
 const player = Player();
+
